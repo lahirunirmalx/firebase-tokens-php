@@ -23,7 +23,7 @@ final class WithGuzzle implements Handler
 {
     public function __construct(
         private readonly ClientInterface $client,
-        private readonly ClockInterface $clock
+        private readonly ClockInterface $clock,
     ) {}
 
     public function handle(FetchGooglePublicKeys $action): Keys

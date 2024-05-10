@@ -16,7 +16,7 @@ final class SecureToken implements Token, Stringable
     private function __construct(
         private readonly string $encodedString,
         private readonly array $headers,
-        private readonly array $payload
+        private readonly array $payload,
     ) {}
 
     public function __toString(): string

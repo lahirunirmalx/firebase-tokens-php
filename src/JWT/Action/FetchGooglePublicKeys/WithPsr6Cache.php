@@ -19,7 +19,7 @@ final class WithPsr6Cache implements Handler
     public function __construct(
         private readonly Handler $handler,
         private readonly CacheItemPoolInterface $cache,
-        private readonly ClockInterface $clock
+        private readonly ClockInterface $clock,
     ) {}
 
     public function handle(FetchGooglePublicKeys $action): Keys

@@ -29,7 +29,7 @@ final class WithLcobucciJWT implements Handler
     public function __construct(
         private readonly string $clientEmail,
         string $privateKey,
-        private readonly ClockInterface $clock
+        private readonly ClockInterface $clock,
     ) {
         $this->config = Configuration::forSymmetricSigner(
             new Sha256(),
