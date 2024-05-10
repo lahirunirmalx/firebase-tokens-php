@@ -15,15 +15,11 @@ final class Util
     {
         $value = $_SERVER[$name] ?? $_ENV[$name] ?? getenv($name);
 
-        if ($value === false) {
-            return null;
+        if (is_string($value)) {
+            return $value;
         }
 
-        if ($value === null) {
-            return null;
-        }
-
-        return (string) $value;
+        return null;
     }
 
     public static function authEmulatorHost(): string
