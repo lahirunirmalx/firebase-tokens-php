@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Kreait\Firebase\JWT\Action\VerifySessionCookie;
 
+use Beste\Clock\FrozenClock;
 use DateInterval;
 use DateTimeImmutable;
 use DateTimeInterface;
@@ -16,7 +17,6 @@ use Kreait\Firebase\JWT\SecureToken;
 use Kreait\Firebase\JWT\Signer\None;
 use Kreait\Firebase\JWT\Token\Parser;
 use Kreait\Firebase\JWT\Util;
-use Lcobucci\Clock\FrozenClock;
 use Lcobucci\JWT\Encoding\JoseEncoder;
 use Lcobucci\JWT\Signer;
 use Lcobucci\JWT\Signer\Key\InMemory;
@@ -75,7 +75,7 @@ final readonly class WithLcobucciJWT implements Handler
         }
 
         $key = $this->getKey($token);
-        $clock = new FrozenClock($this->clock->now());
+        $clock = FrozenClock::at($this->clock->now());
         $leeway = new DateInterval('PT' . $action->leewayInSeconds() . 'S');
         $errors = [];
         $constraints = [
