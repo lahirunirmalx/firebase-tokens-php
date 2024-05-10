@@ -38,7 +38,7 @@ use function is_string;
 /**
  * @internal
  */
-final readonly class WithLcobucciJWT implements Handler
+final class WithLcobucciJWT implements Handler
 {
     private Parser $parser;
     private Signer $signer;
@@ -48,9 +48,9 @@ final readonly class WithLcobucciJWT implements Handler
      * @param non-empty-string $projectId
      */
     public function __construct(
-        private string $projectId,
-        private Keys $keys,
-        private ClockInterface $clock,
+        private readonly string $projectId,
+        private readonly Keys $keys,
+        private readonly ClockInterface $clock,
     ) {
         $this->parser = new Parser(new JoseEncoder());
 

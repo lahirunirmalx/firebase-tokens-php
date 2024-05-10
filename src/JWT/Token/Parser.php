@@ -10,11 +10,11 @@ use Lcobucci\JWT\Parser as ParserInterface;
 use Lcobucci\JWT\Token;
 use Lcobucci\JWT\Token\Parser as SecureParser;
 
-final readonly class Parser implements ParserInterface
+final class Parser implements ParserInterface
 {
     private ParserInterface $parser;
 
-    public function __construct(Decoder $decoder)
+    public function __construct(readonly Decoder $decoder)
     {
         if (Util::authEmulatorHost() !== '') {
             $this->parser = new InsecureParser($decoder);
