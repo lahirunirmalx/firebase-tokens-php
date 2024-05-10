@@ -76,7 +76,7 @@
             "@test-emulator"
         ],
         "test-emulator": [
-            "FIREBASE_DATABASE_EMULATOR_HOST=localhost:9100",
+            "FIREBASE_AUTH_EMULATOR_HOST=localhost:9099",
             "firebase emulators:exec --only auth --project demo-project 'vendor/bin/phpunit --group=emulator --testdox'"
         ],
         "test-units": [
