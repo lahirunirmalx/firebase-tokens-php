@@ -26,7 +26,7 @@
         "beste/clock": "2.1.0",
         "fig/http-message-util": "^1.1.5",
         "guzzlehttp/guzzle": "^7.8",
-        "lcobucci/jwt": "^5.2",
+        "lcobucci/jwt": "4.3.0",
         "psr/cache": "^1.0|^2.0|^3.0"
     },
     "suggest": {
