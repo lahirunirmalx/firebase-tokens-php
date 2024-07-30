@@ -17,6 +17,8 @@
             "url": "https://github.com/sponsors/jeromegamez"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": "^7.2",
         "ext-json": "*",
