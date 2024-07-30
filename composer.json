@@ -23,7 +23,7 @@
         "php": "^7.2",
         "ext-json": "*",
         "ext-openssl": "*",
-        "beste/clock": "^3.0",
+        "beste/clock": "2.1.0",
         "fig/http-message-util": "^1.1.5",
         "guzzlehttp/guzzle": "^7.8",
         "lcobucci/jwt": "^5.2",
